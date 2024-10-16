@@ -1,6 +1,3 @@
-// import { useContext } from "react";
-// import { ItemsContext } from "../App";
-// import { useEffect, useCallback } from "react";
 import { ItemType } from "../App";
 
 type ItemProps = {
@@ -46,7 +43,6 @@ export default function Item({
 				>
 					{item.quantity} {item.name}
 				</span>
-				{/* <span className="text-light-yellow">{item.name}</span> */}
 			</label>
 			<button
 				onClick={() => handleDelete(item.id)}

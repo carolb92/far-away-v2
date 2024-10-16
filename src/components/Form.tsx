@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { ItemType } from "../App";
-// import { ItemsContext } from "../App";
 
 type FormProps = {
 	itemsList: ItemType[];
@@ -8,11 +7,6 @@ type FormProps = {
 };
 
 export default function Form({ itemsList, setItemsList }: FormProps) {
-	const formStyle = {
-		display: "flex",
-		gap: "1rem",
-	};
-
 	const [name, setName] = useState("");
 	const [quantity, setQuantity] = useState(1);
 
@@ -27,7 +21,7 @@ export default function Form({ itemsList, setItemsList }: FormProps) {
 	return (
 		<div className="bg-dark-orange py-10 px-5 flex flex-col md:flex-row items-center justify-center gap-3">
 			<h3 className="text-lg font-semibold">What do you need for your trip?</h3>
-			<form style={formStyle} onSubmit={addItem}>
+			<form className="flex gap-4" onSubmit={addItem}>
 				<label htmlFor="quantity-select" />
 				<select
 					name="quantity"
