@@ -12,6 +12,7 @@ export default function Form({ itemsList, setItemsList }: FormProps) {
 
 	const addItem = (e: React.FormEvent) => {
 		e.preventDefault();
+		if (!name) return;
 		const newItem = { quantity, name, isCompleted: false, id: Date.now() };
 		setItemsList([...itemsList, newItem]);
 		setName("");
